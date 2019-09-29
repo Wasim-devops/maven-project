@@ -14,6 +14,7 @@ pipeline {
     sh 'mvn test'
   }
  } 
+        }
  stage ('deploy to tomcat'){
 
 steps{
