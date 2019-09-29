@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage ('SCM Checkout') {
             steps { 
-   git credentialsId: '62606cb8-c80d-41d6-b9ee-f8c241074775', url: 'https://github.com/jkalpeshgithub/maven-project.git'
+   git credentialsId: 'ed4c5c22-12dd-4cac-ab0c-7b4729cc1bb1', url: 'https://github.com/Wasim-devops/maven-project.git'
       }
         }
         stage ('Code Test') {
     steps
   {
-   withMaven(maven: 'LocalMaven')
+   withMaven(maven: 'Mavenlocal')
   {
     sh 'mvn test'
   }
